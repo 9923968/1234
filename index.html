@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabiana Motors - Carros Elétricos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <div class="logo">Fabiana Motors</div>
+        <div class="accessibility-controls">
+            <button id="toggle-theme">Modo Escuro</button>
+            <button id="increase-font">A+</button>
+            <button id="decrease-font">A-</button>
+        </div>
+    </header>
 
+    <main>
+        <aside class="filters">
+            <h2>Filtros</h2>
+            <div class="filter-group">
+                <label for="brand-filter">Marca:</label>
+                <select id="brand-filter">
+                    <option value="all">Todas</option>
+                    <option value="BYD">BYD</option>
+                    <option value="GWM">GWM (Haval)</option>
+                    <option value="Volvo">Volvo</option>
+                    <option value="Porsche">Porsche</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="type-filter">Tipo:</label>
+                <select id="type-filter">
+                    <option value="all">Todos</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Hatch">Hatch</option>
+                    <option value="Esportivo">Esportivo</option>
+                </select>
+            </div>
+        </aside>
+
+        <section class="car-grid" id="car-grid">
+            </section>
+    </main>
+
+    <div id="car-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div class="modal-gallery" id="modal-gallery"></div>
+            <p id="modal-type-brand"></p>
+            <p class="price" id="modal-price"></p>
+            <p id="modal-description"></p>
+            <button class="buy-btn">Tenho Interesse</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
